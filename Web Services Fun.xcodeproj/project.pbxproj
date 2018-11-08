@@ -13,6 +13,8 @@
 		7B7222052194AC3A0095F88F /* Web_Services_Fun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B7222032194AC3A0095F88F /* Web_Services_Fun.xcdatamodeld */; };
 		7B7222072194AC3B0095F88F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B7222062194AC3B0095F88F /* Assets.xcassets */; };
 		7B72220A2194AC3B0095F88F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B7222082194AC3B0095F88F /* LaunchScreen.storyboard */; };
+		7B7222122194AFA30095F88F /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7222112194AFA30095F88F /* FlickrAPI.swift */; };
+		7B7222142194B6B90095F88F /* InterestingPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7222132194B6B90095F88F /* InterestingPhoto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		7B7222062194AC3B0095F88F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B7222092194AC3B0095F88F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B72220B2194AC3B0095F88F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B7222112194AFA30095F88F /* FlickrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
+		7B7222132194B6B90095F88F /* InterestingPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestingPhoto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				7B7221FC2194AC3A0095F88F /* AppDelegate.swift */,
 				7B7221FE2194AC3A0095F88F /* ViewController.swift */,
+				7B7222112194AFA30095F88F /* FlickrAPI.swift */,
+				7B7222132194B6B90095F88F /* InterestingPhoto.swift */,
 				7B7222002194AC3A0095F88F /* Main.storyboard */,
 				7B7222062194AC3B0095F88F /* Assets.xcassets */,
 				7B7222082194AC3B0095F88F /* LaunchScreen.storyboard */,
@@ -139,8 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B7221FF2194AC3A0095F88F /* ViewController.swift in Sources */,
+				7B7222142194B6B90095F88F /* InterestingPhoto.swift in Sources */,
 				7B7221FD2194AC3A0095F88F /* AppDelegate.swift in Sources */,
 				7B7222052194AC3A0095F88F /* Web_Services_Fun.xcdatamodeld in Sources */,
+				7B7222122194AFA30095F88F /* FlickrAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
