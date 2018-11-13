@@ -12,8 +12,13 @@ struct InterestingPhoto {
     // a struct to store photo information received from Flickr
     var id: String
     var title: String
-    var dateTaken: String
+    // var dateTaken: String
     var photoURL: String
     
-    
+    init(id: String, title: String, dateTaken: String, photoURL: String) {
+        self.id = id
+        self.title = title
+        // self.dateTaken = dateTaken
+        self.photoURL = photoURL
+    }
 }

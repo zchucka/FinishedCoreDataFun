@@ -23,14 +23,34 @@ class ViewController: UIViewController {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var image: UIImageView!
-    
+    var interestingPhotos = [InterestingPhoto]()
+    var location = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        FlickrAPI.fetchInterestingPhotos()
+        FlickrAPI.fetchInterestingPhotos(completion: { (photosOptional) in
+            if let interestingPhotosArray = photosOptional {
+                print("we got it boys")
+                self.interestingPhotos = interestingPhotosArray
+                self.updateUI()
+                // this closure is running on a background thread
+                // to do: call on main ui thread
+                // task: add properties for the [InterestingPhoto] and a current photo index
+                // define an updateUI method that updates the labels for title and datetaken
+                // call updateUI here and when they press next photo
+            }
+        })
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    
+    @IBAction func buttonIsPressed(_ sender: UIButton) {
+        updateUI()
+    }
+    
+    func updateUI() {
+        nameLabel.text = interestingPhotos[location].title
+        location += 1
+        location %= interestingPhotos.count
+    }
 }
 

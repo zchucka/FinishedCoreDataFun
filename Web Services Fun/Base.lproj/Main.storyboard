@@ -41,6 +41,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2N3-yh-JsO">
                                                 <rect key="frame" x="0.0" y="57" width="343" height="30"/>
                                                 <state key="normal" title="Next Interesting Photo"/>
+                                                <connections>
+                                                    <action selector="buttonIsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="we8-9N-5sn"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -57,9 +60,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="dateLabel" destination="1qj-rl-EH5" id="Hn5-UM-RNi"/>
-                        <outlet property="image" destination="TXK-hF-Wli" id="hQf-FH-HOd"/>
-                        <outlet property="nameLabel" destination="fse-42-6jG" id="KNv-Jc-sbI"/>
+                        <outlet property="dateLabel" destination="1qj-rl-EH5" id="Ghf-b8-wSz"/>
+                        <outlet property="image" destination="TXK-hF-Wli" id="CGw-hv-BQP"/>
+                        <outlet property="nameLabel" destination="fse-42-6jG" id="1XP-OD-UZY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
