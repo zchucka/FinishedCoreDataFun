@@ -49,6 +49,12 @@ class ViewController: UIViewController {
     
     func updateUI() {
         nameLabel.text = interestingPhotos[location].title
+        
+        FlickrAPI.fetchImage(fromURLString: interestingPhotos[location].photoURL) { (imageOptional) in
+            if let images = imageOptional {
+                self.image.image = images
+            }
+        }
         location += 1
         location %= interestingPhotos.count
     }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct FlickrAPI {
     // it is bad practice to put an APIkey in your code
@@ -138,4 +139,23 @@ struct FlickrAPI {
         return photo
     }
     
+    static func fetchImage(fromURLString: String, completion: @escaping (UIImage?) -> Void) {
+        let url = URL(string: fromURLString)!
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let data = data, let image = UIImage(data: data) {
+                print("successfully got a UIImage")
+                DispatchQueue.main.async {
+                    completion(image)
+                }
+            } else {
+                if let error = error {
+                    print("Error getting an image \(error)")
+                }
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
+            }
+        }
+        task.resume()
+    }
 }
